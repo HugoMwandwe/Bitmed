@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyMed - Register</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+    
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <h1>Create an Account</h1>
+                <form action="login.html" method="POST" class="auth-form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                <p class="auth-links">
+                    Already have an account? <a href="login.html">Login here</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

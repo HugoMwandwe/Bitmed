@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Services - BeautyMed</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Inline styles for immediate effect */
+        .medical-container {
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 0 20px;
+        }
+
+        .medical-title {
+            color: #00008B;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .medical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .medical-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .medical-card h2 {
+            color: #00008B;
+            margin-bottom: 15px;
+        }
+
+        .medical-card .price {
+            color: #00008B;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .medical-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .medical-card li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .medical-card li:before {
+            content: "•";
+            color: #00008B;
+            position: absolute;
+            left: 0;
+        }
+
+        .book-btn {
+            display: block;
+            background: #00008B;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .book-btn:hover {
+            background: #000066;
+        }
+
+        @media (max-width: 768px) {
+            .medical-container {
+                margin: 80px auto 20px;
+                padding: 0 15px;
+            }
+            
+            .medical-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="medical-container">
+        <h1 class="medical-title">Medical Services</h1>
+        
+        <div class="medical-grid">
+            <div class="medical-card">
+                <h2>General Health Checkups</h2>
+                <p class="price">From $100</p>
+                <ul>
+                    <li>Physical examination</li>
+                    <li>Blood pressure check</li>
+                    <li>Basic blood work</li>
+                    <li>Health consultation</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="medical-card">
+                <h2>Dermatology Consultations</h2>
+                <p class="price">From $150</p>
+                <ul>
+                    <li>Skin examination</li>
+                    <li>Acne treatment</li>
+                    <li>Skin condition diagnosis</li>
+                    <li>Treatment planning</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="medical-card">
+                <h2>Dental Services</h2>
+                <p class="price">From $80</p>
+                <ul>
+                    <li>Dental checkup</li>
+                    <li>Teeth cleaning</li>
+                    <li>Cavity treatment</li>
+                    <li>Dental consultation</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="medical-card">
+                <h2>Cosmetic Procedures</h2>
+                <p class="price">From $200</p>
+                <ul>
+                    <li>Botox treatments</li>
+                    <li>Dermal fillers</li>
+                    <li>Chemical peels</li>
+                    <li>Skin rejuvenation</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="medical-card">
+                <h2>Wellness Consultations</h2>
+                <p class="price">From $90</p>
+                <ul>
+                    <li>Nutrition advice</li>
+                    <li>Lifestyle assessment</li>
+                    <li>Wellness planning</li>
+                    <li>Health coaching</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="medical-card">
+                <h2>Preventive Care</h2>
+                <p class="price">From $120</p>
+                <ul>
+                    <li>Health screening</li>
+                    <li>Vaccination services</li>
+                    <li>Risk assessment</li>
+                    <li>Preventive planning</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointments - BeautyMed</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Appointment booked successfully!</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="booking-container">
+            <h1>Book Your Appointment</h1>
+            <form class="booking-form" id="appointmentForm">
+                <div class="form-group">
+                    <label for="serviceType">Select Service Type:</label>
+                    <select id="serviceType" name="serviceType" required onchange="updateServices()">
+                        <option value="">Choose a service type</option>
+                        <option value="beauty">Beauty Salon</option>
+                        <option value="barber">Barber Shop</option>
+                        <option value="medical">Medical Appointments</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specificService">Select Specific Service:</label>
+                    <select id="specificService" name="specificService" required>
+                        <option value="">First select a service type</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentTime">Preferred Time:</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Special Notes or Requirements:</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+    <script>
+        const services = {
+            beauty: [
+                "Professional Hair Styling & Coloring",
+                "Manicure & Pedicure Services",
+                "Facial Treatments & Skincare",
+                "Professional Makeup Services",
+                "Waxing & Hair Removal",
+                "Eyelash Extensions & Tinting"
+            ],
+            barber: [
+                "Classic & Modern Haircuts",
+                "Beard Trimming & Shaping",
+                "Hot Towel Shaves",
+                "Hair Styling & Products",
+                "Scalp Treatments",
+                "Kids' Haircuts"
+            ],
+            medical: [
+                "General Health Checkups",
+                "Dermatology Consultations",
+                "Dental Services",
+                "Cosmetic Procedures",
+                "Wellness Consultations",
+                "Preventive Care"
+            ]
+        };
+
+        function updateServices() {
+            const serviceType = document.getElementById('serviceType').value;
+            const specificService = document.getElementById('specificService');
+            specificService.innerHTML = '<option value="">Select a specific service</option>';
+
+            if (serviceType) {
+                services[serviceType].forEach(service => {
+                    const option = document.createElement('option');
+                    option.value = service;
+                    option.textContent = service;
+                    specificService.appendChild(option);
+                });
+            }
+        }
+
+        // Set minimum date to today
+        document.getElementById('appointmentDate').min = new Date().toISOString().split('T')[0];
+
+        // Updated form submission handling
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show popup
+            const popup = document.getElementById('popup');
+            popup.classList.add('show');
+
+            // Redirect after 2 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 

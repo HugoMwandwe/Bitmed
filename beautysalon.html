@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon Services - BeautyMed</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Inline styles for immediate effect */
+        .salon-container {
+            max-width: 1200px;
+            margin: 100px auto 40px;
+            padding: 0 20px;
+        }
+
+        .salon-title {
+            color: #00008B;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .salon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .salon-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .salon-card h2 {
+            color: #00008B;
+            margin-bottom: 15px;
+        }
+
+        .salon-card .price {
+            color: #00008B;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .salon-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .salon-card li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .salon-card li:before {
+            content: "•";
+            color: #00008B;
+            position: absolute;
+            left: 0;
+        }
+
+        .book-btn {
+            display: block;
+            background: #00008B;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        .book-btn:hover {
+            background: #000066;
+        }
+
+        @media (max-width: 768px) {
+            .salon-container {
+                margin: 80px auto 20px;
+                padding: 0 15px;
+            }
+            
+            .salon-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="salon-container">
+        <h1 class="salon-title">Beauty Salon Services</h1>
+        
+        <div class="salon-grid">
+            <div class="salon-card">
+                <h2>Professional Hair Styling & Coloring</h2>
+                <p class="price">From $50</p>
+                <ul>
+                    <li>Hair coloring & highlights</li>
+                    <li>Professional styling</li>
+                    <li>Hair treatments</li>
+                    <li>Blowouts & updos</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="salon-card">
+                <h2>Manicure & Pedicure Services</h2>
+                <p class="price">From $35</p>
+                <ul>
+                    <li>Classic manicure/pedicure</li>
+                    <li>Gel nail services</li>
+                    <li>Nail art & designs</li>
+                    <li>Spa treatments</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="salon-card">
+                <h2>Facial Treatments & Skincare</h2>
+                <p class="price">From $45</p>
+                <ul>
+                    <li>Deep cleansing facials</li>
+                    <li>Anti-aging treatments</li>
+                    <li>Skin rejuvenation</li>
+                    <li>Custom face masks</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="salon-card">
+                <h2>Professional Makeup Services</h2>
+                <p class="price">From $40</p>
+                <ul>
+                    <li>Special occasion makeup</li>
+                    <li>Bridal makeup</li>
+                    <li>Makeup lessons</li>
+                    <li>Makeup consultation</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="salon-card">
+                <h2>Waxing & Hair Removal</h2>
+                <p class="price">From $20</p>
+                <ul>
+                    <li>Full body waxing</li>
+                    <li>Facial waxing</li>
+                    <li>Brazilian waxing</li>
+                    <li>Threading services</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+
+            <div class="salon-card">
+                <h2>Eyelash Extensions & Tinting</h2>
+                <p class="price">From $30</p>
+                <ul>
+                    <li>Classic lash extensions</li>
+                    <li>Volume lashes</li>
+                    <li>Lash lifting & tinting</li>
+                    <li>Brow tinting</li>
+                </ul>
+                <a href="book-appointments.html" class="book-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
